@@ -24,7 +24,7 @@ export default function Header() {
               <img
                 className="w-[126px] h-[26px]"
                 alt="logo"
-                src="src/assets/images/MEMOVERSE (2).png"
+                src="./MEMOVERSE (2).png"
               />
 
               <div className="hidden sm:flex  text-stone-950 text-semibold font-medium  space-x-4">

@@ -36,7 +36,7 @@ function Footer() {
 
           <div className="md:w-[519px] pb-[60px] md:h-[88px] my-[40px]  md:mt-[20px]">
           <div className="flex flex-row items-center gap-4">
-            <img alt="logo" src="src/assets/images/MEMOVERSE (1).png"/>
+            <img alt="logo" src="./MEMOVERSE (1).png"/>
            
           </div>
           

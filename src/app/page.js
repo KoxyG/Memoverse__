@@ -63,7 +63,7 @@ export default function Home() {
                 >
                   <div className="overflow-hidden cursor-pointer border-2 border-white rounded-sm w-[244px] h-[155px] ">
                     <img
-                      src="src/assets/images/Frame (2).png"
+                      src="./Frame (2) (1).png"
                       alt="trending blog"
                       className={classNames({
                         "scale-110 transition-transform": isHover,
@@ -94,7 +94,7 @@ export default function Home() {
                 >
                   <div className="cursor-pointer overflow-hidden border-2 border-white rounded-sm w-[244px] h-[155px] ">
                     <img
-                      src="src/assets/images/Frame (1).png"
+                      src="./Frame (1).png"
                       alt="trending blog"
                       className={classNames({
                         "scale-110 transition-transform": isHover,
@@ -134,7 +134,7 @@ export default function Home() {
                   rounded-tr-full shadow border border-white "
                 >
                   <img
-                    src="src/assets/images/placeholder.png"
+                    src="./placeholder.png"
                     alt="trending blog"
                     className={classNames({
                       "scale-110 transition-transform": isHover,
@@ -282,7 +282,7 @@ export default function Home() {
             <div className="sm:grid sm:grid-cols-3 sm:gap-3   ">
               <div className="border border-2 bg-[#251206] rounded-lg mb-6 sm:mb-0 w-[340px] h-[230px] gap-4">
                 <div className=" grid place-content-center py-[10px]">
-                  <img alt="" src="src/assets/images/icon1.png" />
+                  <img alt="" src="./icon1.png" />
                 </div>
                 <h2 className="text-white text-xl  text-center font-bold leading-loose">
                   Creative Writing Tools
@@ -297,7 +297,7 @@ export default function Home() {
 
               <div className="border border-2 bg-[#251206] rounded-lg mb-6 sm:mb-0 w-[340px] h-[230px]">
                 <div className=" grid place-content-center py-[10px]">
-                  <img alt="" src="src/assets/images/icon2.png" />
+                  <img alt="" src="./icon2.png" />
                 </div>
                 <h2 className="text-white text-xl  text-center font-bold leading-loose">
                   Eternal Photo Albums
@@ -311,7 +311,7 @@ export default function Home() {
 
               <div className="border border-2 bg-[#251206] rounded-lg mb-6 sm:mb-0 w-[340px] h-[230px]">
                 <div className=" grid place-content-center py-[10px]">
-                  <img alt="" src="src/assets/images/icon3.png" />
+                  <img alt="" src="./icon3.png" />
                 </div>
                 <h2 className="text-white text-xl  text-center font-bold leading-loose">
                   Community and Collaboration
@@ -333,7 +333,7 @@ export default function Home() {
               <div className="sm:flex sm:justify-between  py-[40px] px-[100px]">
                 <div className="hidden  sm:grid sm:w-[317px] sm:h-[312px]">
                   <img
-                    src="src/assets/images/SignIn-Icon.png"
+                    src="./SignIn-Icon.png"
                     alt="illustration"
                   />
                 </div>

@@ -1,6 +1,6 @@
 const BlogDummy = [
      {
-       imgSrc: "src/assets/images/B-frame1.png",
+       imgSrc: "./B-frame1.png",
        id: 1,
        more: " Read More -",
        title: "Journey through Time: My UnforgettableAdventures Around the World",
@@ -8,7 +8,7 @@ const BlogDummy = [
          "From the majestic peaks of snow-capped mountains to the sun-kissed beaches with turquoise waters, each photograph becomes a window to a new world, inviting you to explore and dream"
      },
      {
-       imgSrc: "src/assets/images/B-frame2.png",
+       imgSrc: "./B-frame2.png",
        id: 2,
        title: "Memoirs of a Dreamer: Embracing Creativity and Artistry in Everyday Life",
        more: " Read More -",
@@ -16,7 +16,7 @@ const BlogDummy = [
          "Through the ups and downs, I've found solace in expressing myself through art, and I can't wait to hear your thoughts and connect with kindred spirits. Let's celebrate the magic of imagination together! 🌈 💫"
      },
      {
-       imgSrc: "src/assets/images/B-frame3.png",
+       imgSrc: "./B-frame3.png",
        id: 3,
        title: "Life Lessons and Growth: Reflections on Overcoming Challenges",
        more: " Read More -",
@@ -24,7 +24,7 @@ const BlogDummy = [
          "In this safe space, let's embrace vulnerability and wisdom as we connect through shared experiences. May my stories inspire you on your own path of growth and self-discovery. 🌿🌼"
      },
      {
-       imgSrc: "src/assets/images/B-frame4.png",
+       imgSrc: "./B-frame4.png",
        id: 4,
        more: " Read More -",
        title: "Embracing Wellness: My Journey to Mindfulness, Meditation, Yoga, and Self-Care",
