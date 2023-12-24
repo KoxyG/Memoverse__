@@ -6,9 +6,14 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-     images: {
-          domains: ['res.cloudinary.com'],
-        },
-}
+  images: {
+    domains: ["res.cloudinary.com"],
+  },
+
+  reactStrictMode: true,
+  experimental: {
+    forceSwcTransforms: true,
+  },
+};
 
 module.exports = nextConfig

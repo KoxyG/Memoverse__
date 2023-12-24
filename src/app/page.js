@@ -6,7 +6,7 @@ import classNames from "classnames";
 import { useState } from "react";
 import BlogDummy from "@/Utils/dummyData";
 import BlogPost from "./Component/BlogPost";
-import Subscriber from "./Elements/subscribe";
+import Subscriber from "./Elements/Subscribe";
 import Footer from "./Component/Footer";
 import Link from "next/link";
 
