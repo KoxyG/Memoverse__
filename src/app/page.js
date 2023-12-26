@@ -37,7 +37,7 @@ export default function Home() {
 
               <div className="space-x-6 pt-[10px]">
                 <Link href="/dashboard">
-                  <button className="rounded-md bg-gradient-to-r from-orange-400 px-5 py-2.5  to-orange-400 text-white rounded-sm text-center ">
+                  <button className=" bg-gradient-to-r from-orange-400 px-5 py-2.5  to-orange-400 text-white rounded-sm text-center ">
                     Start Creating
                   </button>
                 </Link>
@@ -263,6 +263,7 @@ export default function Home() {
                   title={Blog.title}
                   content={Blog.content}
                   more={Blog.more}
+                  classname="px-6"
                 />
               ))}
             </div>
@@ -280,7 +281,7 @@ export default function Home() {
             </h2>
 
             <div className="sm:grid sm:grid-cols-3 sm:gap-3   ">
-              <div className="border border-2 bg-[#251206] rounded-lg mb-6 sm:mb-0 w-[340px] h-[230px] gap-4">
+              <div className="border-2 bg-[#251206] rounded-lg mb-6 sm:mb-0 w-[340px] h-[230px] gap-4">
                 <div className=" grid place-content-center py-[10px]">
                   <img alt="" src="./icon1.png" />
                 </div>
@@ -295,7 +296,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="border border-2 bg-[#251206] rounded-lg mb-6 sm:mb-0 w-[340px] h-[230px]">
+              <div className="border-2 bg-[#251206] rounded-lg mb-6 sm:mb-0 w-[340px] h-[230px]">
                 <div className=" grid place-content-center py-[10px]">
                   <img alt="" src="./icon2.png" />
                 </div>
@@ -309,7 +310,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="border border-2 bg-[#251206] rounded-lg mb-6 sm:mb-0 w-[340px] h-[230px]">
+              <div className=" border-2 bg-[#251206] rounded-lg mb-6 sm:mb-0 w-[340px] h-[230px]">
                 <div className=" grid place-content-center py-[10px]">
                   <img alt="" src="./icon3.png" />
                 </div>
