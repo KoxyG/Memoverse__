@@ -4,11 +4,11 @@ import { HiOutlineMail } from "react-icons/hi";
 
 function Footer() {
   return (
-    <div className="px-[30px] md:px-[100px] py-[60px]
-    bg-[#251206] grid grid-cols-1 md:flex md:flex-row gap-4">
+    <div className="px-[30px] md:px-[80px] py-[60px]
+    bg-[#251206] grid grid-cols-1 md:flex md:flex-row gap-4 w-full overflow-hidden">
       <div className="md:flex flex-wrap md:flex-row justify-between w-full">
        
-        <div className="md:flex justify-center items-start md:gap-[100px]">
+        <div className="md:flex justify-center items-start md:gap-[80px]">
           <div className="flex flex-row gap-[100px]">
             <div className="pt-[20px] sm:pt-0 flex flex-col gap-7">
               <p className="text-gray-50 text-[25px] md:text-[40px] font-semibold">Product</p>
