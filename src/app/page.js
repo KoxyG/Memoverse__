@@ -66,12 +66,15 @@ export default function Home() {
                   onMouseLeave={() => setHover(false)}
                 >
                   <div className=" overflow-hidden cursor-pointer border-2 border-white rounded-sm w-[244px] h-[155px] ">
-                    <img
-                      src="./Frame (2) (1).png"
+                    <Image
+                      src="/Frame (2) (1).png"
                       alt="trending blog"
                       className={classNames({
                         "scale-110 transition-transform": isHover,
                       })}
+                      width={500}
+                      height={500}
+                      
                     />
                   </div>
 
@@ -97,12 +100,14 @@ export default function Home() {
                   onMouseLeave={() => setHover(false)}
                 >
                   <div className="cursor-pointer overflow-hidden border-2 border-white rounded-sm w-[244px] h-[155px] ">
-                    <img
-                      src="./Frame (1).png"
+                    <Image
+                      src="/Frame (1).png"
                       alt="trending blog"
                       className={classNames({
                         "scale-110 transition-transform": isHover,
                       })}
+                      width={500}
+                      height={500}
                     />
                   </div>
 
@@ -264,7 +269,7 @@ export default function Home() {
             <div className="sm:grid sm:grid-cols-3 sm:gap-3  ">
               <div className="border-2 bg-[#251206] rounded-lg mb-6 sm:mb-0 w-[340px] h-[330px] gap-4">
                 <div className=" grid place-content-center py-[10px]">
-                  <img alt="" src="./icon1.png" />
+                  <Image width={50} height={50} alt="" src="/icon1.png" />
                 </div>
                 <h2 className="text-white text-xl  text-center font-bold leading-loose">
                   Creative Writing Tools
@@ -279,7 +284,7 @@ export default function Home() {
 
               <div className="border-2 bg-[#251206] rounded-lg mb-6 sm:mb-0 w-[340px] h-[330px]">
                 <div className=" grid place-content-center py-[10px]">
-                  <img alt="" src="./icon2.png" />
+                  <Image alt="" width={50}  height={50} src="/icon2.png" />
                 </div>
                 <h2 className="text-white text-xl  text-center font-bold leading-loose">
                   Eternal Photo Albums
@@ -293,7 +298,7 @@ export default function Home() {
 
               <div className=" border-2 bg-[#251206] rounded-lg mb-6 sm:mb-0 w-[340px] h-[330px]">
                 <div className=" grid place-content-center py-[10px]">
-                  <img alt="" src="./icon3.png" />
+                  <Image alt="" width={50} height={50} src="/icon3.png" />
                 </div>
                 <h2 className="text-white text-xl  text-center font-bold leading-loose">
                   Community and Collaboration
@@ -313,8 +318,8 @@ export default function Home() {
           <div className=" sm:px-[80px] pb-[100px] z-10">
             <div style={gradientStyle} className="rounded-md">
               <div className="sm:flex sm:justify-between  py-[40px] px-[100px]">
-                <div className="hidden  sm:grid sm:w-[317px] sm:h-[312px]">
-                  <Image width={317} height={312} src="/SignIn-Icon.png" alt="illustration" />
+                <div className="sm:grid sm:w-[317px] sm:h-[312px]">
+                  <Image width={217} height={212} src="/SignIn-Icon.png" alt="illustration" />
                 </div>
 
                 <div className="">
