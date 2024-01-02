@@ -6,6 +6,7 @@ import classNames from "classnames";
 import { useState } from "react";
 import BlogDummy from "@/Utils/dummyData";
 import BlogPost from "./Component/BlogPost";
+import AchievementsSection from "./Elements/AchievementsSection";
 // import Subscriber from "./Elements/Subscribe";
 import Footer from "./Component/Footer";
 import Link from "next/link";
@@ -151,8 +152,9 @@ export default function Home() {
                   </p>
                 </Card>
               </div>
-
-              <div className="grid grid-cols-3 pt-[80px]">
+                    {/* Archievement section */}
+                    <AchievementsSection/>
+              {/* <div className="grid grid-cols-3 pt-[80px]">
                 <div className="flex gap-4 sm:gap-6">
                   <h2 className="text-orange-300 text-2xl sm:text-3xl font-bold leading-7 sm:leading-9">
                     50k+
@@ -179,7 +181,9 @@ export default function Home() {
                     Albums
                   </p>
                 </div>
-              </div>
+              </div> */}
+
+
             </div>
           </section>
         </div>
