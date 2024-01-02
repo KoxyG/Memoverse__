@@ -55,6 +55,7 @@ const page = () => {
             objectFit="cover"
             objectPosition="center"
             height="auto"
+            priority
             className="block w-[60%] m-auto sm:w-1/2 h-auto"
           />
           <div className="grid justify-between place-items-center">
@@ -88,7 +89,7 @@ const page = () => {
       </div>
 
       {/* THIS SECTION IS FOR THE FEATURED BLOG POSTS */}
-      <div className='w-3/5 pt-5'>
+      <div className='sm:w-3/5 w-full pt-5'>
         <p className='flex items-center gap-4 font-bold'>
           Top Match Blog For You <IoIosArrowDown />
         </p>
