@@ -6,7 +6,7 @@ import classNames from "classnames";
 import { useState } from "react";
 import BlogDummy from "@/Utils/dummyData";
 import BlogPost from "./Component/BlogPost";
-import Subscriber from "./Elements/Subscribe";
+// import Subscriber from "./Elements/Subscribe";
 import Footer from "./Component/Footer";
 import Link from "next/link";
 
@@ -350,7 +350,7 @@ export default function Home() {
                     <br /> special offers right in your inbox.
                   </p>
 
-                  <Subscriber />
+                  {/* <Subscriber /> */}
                 </div>
               </div>
             </div>
