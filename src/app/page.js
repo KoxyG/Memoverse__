@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Header from "./Component/Header";
 import { gradientStyle } from "./Elements/GradientStyle";
 import Card from "./Component/Card";
@@ -10,6 +10,7 @@ import AchievementsSection from "./Elements/AchievementsSection";
 // import Subscriber from "./Elements/Subscribe";
 import Footer from "./Component/Footer";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   const [isHover, setHover] = useState(false);
@@ -62,7 +63,7 @@ export default function Home() {
                   onMouseOver={() => setHover(true)}
                   onMouseLeave={() => setHover(false)}
                 >
-                  <div className="overflow-hidden cursor-pointer border-2 border-white rounded-sm w-[244px] h-[155px] ">
+                  <div className=" overflow-hidden cursor-pointer border-2 border-white rounded-sm w-[244px] h-[155px] ">
                     <img
                       src="./Frame (2) (1).png"
                       alt="trending blog"
@@ -72,7 +73,7 @@ export default function Home() {
                     />
                   </div>
 
-                  <Card className="rounded-none w-[243px] h-[124px]">
+                  <Card className=" bg-[#625a55] rounded-none w-[243px] h-[124px]">
                     <h4 className=" p-[14px] text-white pb-2 text-base font-semibold leading-snug">
                       Journey through Time
                     </h4>
@@ -103,7 +104,7 @@ export default function Home() {
                     />
                   </div>
 
-                  <Card className="rounded-none w-[243px] h-[124px]">
+                  <Card className=" bg-[#625a55]  rounded-none w-[243px] h-[124px]">
                     <h4 className=" p-[14px] text-white pb-2 text-base font-semibold leading-snug">
                       Memoirs of a Dreamer
                     </h4>
@@ -129,13 +130,16 @@ export default function Home() {
                 onMouseOver={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
               >
+                <div className="">
                 <div
                   className="overflow-hidden align-middle 
                   cursor-pointer w-[350.87px] h-[300px] rounded-tl-full 
-                  rounded-tr-full shadow border border-white "
+                  rounded-tr-full "
                 >
-                  <img
-                    src="./placeholder.png"
+                  <Image
+                    src="/placeholder.png"
+                    width={350.87}
+                    height={300}
                     alt="trending blog"
                     className={classNames({
                       "scale-110 transition-transform": isHover,
@@ -151,46 +155,17 @@ export default function Home() {
                     dream
                   </p>
                 </Card>
+                </div>
               </div>
-                    {/* Archievement section */}
-                    <AchievementsSection/>
-              {/* <div className="grid grid-cols-3 pt-[80px]">
-                <div className="flex gap-4 sm:gap-6">
-                  <h2 className="text-orange-300 text-2xl sm:text-3xl font-bold leading-7 sm:leading-9">
-                    50k+
-                  </h2>
-                  <p className="text-white text-[13px] sm:text-base font-normal leading-snug pt-2">
-                    Users
-                  </p>
-                </div>
-
-                <div className="flex gap-4 sm:gap-6">
-                  <h2 className="text-orange-300 text-2xl sm:text-3xl font-bold leading-7 sm:leading-9">
-                    30k+
-                  </h2>
-                  <p className="text-white text-[10px] sm:text-base font-normal leading-snug pt-2">
-                    Blog plosts
-                  </p>
-                </div>
-
-                <div className="flex gap-4 sm:gap-6">
-                  <h2 className="text-orange-300 text-2xl sm:text-3xl font-bold leading-7 sm:leading-9">
-                    20k+
-                  </h2>
-                  <p className="text-white text-[13px] sm:text-base font-normal leading-snug pt-2">
-                    Albums
-                  </p>
-                </div>
-              </div> */}
-
-
+              {/* Archievement section */}
+              <AchievementsSection />
             </div>
           </section>
         </div>
 
         {/* Second section */}
         <div className="bg-stone-950">
-          <div className="container mx-auto px-8 sm:px-[80px] py-[100px]">
+          <div className=" px-8 sm:px-[80px] py-[100px]">
             <h2 className="text-white text-3xl pb-[48px] font-bold leading-10">
               Welcome to Memoverse, where creativity <br /> meets blockchain
               technology
@@ -248,7 +223,7 @@ export default function Home() {
 
         {/* Third section */}
         <div className="bg-stone-950">
-          <div className="container mx-auto px-8 sm:px-[80px] pb-[100px]">
+          <div className="px-8 sm:px-[80px] pb-[100px]">
             <div className="flex justify-between">
               {/* Header */}
               <h3 className="text-white sm:text-3xl font-bold leading-10">
@@ -277,7 +252,7 @@ export default function Home() {
         {/* Fourth section */}
         <div className="bg-stone-950">
           <div
-            className="container mx-auto px-8
+            className=" px-8
            sm:px-[80px] pb-[100px]"
           >
             <h2 className="text-white text-3xl pb-[30px] font-bold leading-10">
@@ -333,14 +308,11 @@ export default function Home() {
 
         {/* Fifth section */}
         <div className="bg-stone-950">
-          <div className="container mx-auto  sm:px-[80px] pb-[100px]">
+          <div className=" sm:px-[80px] pb-[100px]">
             <div style={gradientStyle} className="rounded-md">
               <div className="sm:flex sm:justify-between  py-[40px] px-[100px]">
                 <div className="hidden  sm:grid sm:w-[317px] sm:h-[312px]">
-                  <img
-                    src="./SignIn-Icon.png"
-                    alt="illustration"
-                  />
+                  <img src="./SignIn-Icon.png" alt="illustration" />
                 </div>
 
                 <div className="">
