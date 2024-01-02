@@ -312,7 +312,7 @@ export default function Home() {
             <div style={gradientStyle} className="rounded-md">
               <div className="sm:flex sm:justify-between  py-[40px] px-[100px]">
                 <div className="hidden  sm:grid sm:w-[317px] sm:h-[312px]">
-                  <img src="./SignIn-Icon.png" alt="illustration" />
+                  <Image width={317} height={312} src="/SignIn-Icon.png" alt="illustration" />
                 </div>
 
                 <div className="">

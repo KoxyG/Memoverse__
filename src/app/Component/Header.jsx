@@ -2,6 +2,7 @@ import Link from "next/link";
 import { gradientStyle } from "../Elements/GradientStyle";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import Image from "next/image";
 
 
 
@@ -13,7 +14,7 @@ export default function Header() {
   };
 
   return (
-    <header className="">
+    <header className="sticky bg-dark top-0 z-100">
       <nav className="sm:grid sm:grid-cols-2">
         <div style={gradientStyle}>
           <div
@@ -21,10 +22,12 @@ export default function Header() {
         sm:mx-auto  pt-[60px] pb-[20px] sm:pb-[0] sm:pt-[60px]"
           >
             <div className=" sm:pl-[80px] flex justify-between container mx-auto px-8">
-              <img
-                className="w-[126px] h-[26px]"
+              <Image
+              
                 alt="logo"
-                src="./MEMOVERSE (2).png"
+                src="/MEMOVERSE (2).png"
+                width={126}
+                height={26}
               />
 
               <div className="hidden sm:flex  text-stone-950 text-semibold font-medium  space-x-4">

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <div className="hidden sm:flex text-bold font-medium  space-x-20 text-white px-20 py-10 ">
+    <div className="sticky top-0 z-100 hidden sm:flex text-bold font-medium  space-x-20 text-white px-20 py-10 ">
       
       <Link href="/">
         <button className="">Home</button>
