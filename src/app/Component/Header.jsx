@@ -14,11 +14,11 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky bg-dark top-0 z-100">
+    <header className="">
       <nav className="sm:grid sm:grid-cols-2">
-        <div style={gradientStyle}>
+        <div className="" style={gradientStyle}>
           <div
-            className="sm:container
+            className=" sm:container
         sm:mx-auto  pt-[60px] pb-[20px] sm:pb-[0] sm:pt-[60px]"
           >
             <div className=" sm:pl-[80px] flex justify-between container mx-auto px-8">
@@ -26,7 +26,7 @@ export default function Header() {
               
                 alt="logo"
                 src="/MEMOVERSE (2).png"
-                width={126}
+                width={120}
                 height={26}
               />
 

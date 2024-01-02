@@ -18,13 +18,15 @@ export default function Home() {
   return (
     <div>
       <div className="">
+        <div className="">
         <Header />
+        </div>
 
         {/* First section */}
         <div className="sm:grid sm:grid-cols-2">
           {/* Left design */}
           <section
-            className="container mx-auto px-8 sm:pl-[80px]"
+            className="z-30 container mx-auto px-8 sm:pl-[80px]"
             style={gradientStyle}
           >
             <div className="pb-[61px]">
@@ -307,8 +309,8 @@ export default function Home() {
         </div>
 
         {/* Fifth section */}
-        <div className="bg-stone-950">
-          <div className=" sm:px-[80px] pb-[100px]">
+        <div className="bg-stone-950 ">
+          <div className=" sm:px-[80px] pb-[100px] z-10">
             <div style={gradientStyle} className="rounded-md">
               <div className="sm:flex sm:justify-between  py-[40px] px-[100px]">
                 <div className="hidden  sm:grid sm:w-[317px] sm:h-[312px]">
