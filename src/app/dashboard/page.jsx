@@ -11,14 +11,14 @@ const page = () => {
   return (
     <section className="text-white">
       {/* THIS SECTION IS FOR THE TOP MOST LAYER OF THE MAIN BODY OF THE DASHBOARD */}
-      <div className="flex justify-between">
-        <div className="w-2/5 grid gap-2">
+      <div className="grid sm:flex justify-between">
+        <div className="sm:w-2/5 w-full grid gap-2">
           <h2>Welcome to Memoverse.</h2>
           <p className="text-sm font-thin">Hello Primrose, welcome back!</p>
         </div>
 
-        <div className="w-3/5 grid gap-2">
-          <div className="flex justify-evenly items-center">
+        <div className="sm:w-3/5 w-full grid gap-2">
+          <div className="sm:flex grid justify-evenly items-center">
             <div className="flex items-center gap-3">
               <Image
                 src={Profile}
@@ -29,12 +29,12 @@ const page = () => {
               />
               <p>Primrose Roberts</p>
             </div>
-            <div className="font-bold text-gold flex justify-between gap-5">
+            <div className="font-bold text-gold flex justify-between mt-3 sm:mt-0 gap-5">
               <p>
                 900 <span className="font-normal text-white">Following</span>
               </p>
               <p>
-                120 <span className="font-normal text-white">Blog Posts</span>
+                120 <span className="font-normal text-white ">Blog Posts</span>
               </p>
               <p>
                 12k <span className="font-normal text-white">Followers</span>
@@ -46,34 +46,35 @@ const page = () => {
       </div>
 
       {/* THIS SECTION IS FOR THE POST A BLOG AND HOW TO POST A BLOG INSTRUCTION BANNER */}
-      <div className="flex gap-7 justify-between mt-6">
+      <div className="sm:flex sm:gap-7 grid gap-3 justify-between mt-6">
         {/* FOR THE POST A BLOG POST BANNER */}
-        <div className="bg-lightGold flex justify-between gap-5 w-3/5 rounded-2xl p-3">
+        <div className="bg-lightGold sm:flex grid justify-between gap-2 sm:gap-5 w-full sm:w-3/5 rounded-2xl p-3">
           <Image
             src={Placeholder}
             alt="Digital creative illustration"
             objectFit="cover"
             objectPosition="center"
-            className="block w-1/2"
+            height="auto"
+            className="block w-[60%] m-auto sm:w-1/2 h-auto"
           />
           <div className="grid justify-between place-items-center">
-            <h2 className="text-gold font-bold text-2xl">
+            <h2 className="text-gold font-bold sm:text-2xl text-lg">
               Memoverse - empower your Your Memories and Stories
             </h2>
-            <p className="text-black text-xs font-semibold">
+            <p className="text-black text-xs font-semibold my-1">
               A Decentralized Application for Creative Expression and Eternal
               Photo Albums
             </p>
-            <Button title="Post a blog" classname="w-full rounded-md" />
+            <Button title="Post a blog" classname="w-full rounded-md py-1 px-2 text-sm" />
           </div>
         </div>
 
         {/* FOR THE HOW TO POST A BLOG POST INSTRUCTION */}
-        <div className="w-2/5 bg-lightGold grid gap-3 rounded-2xl p-6">
+        <div className="w-full sm:w-2/5 bg-lightGold grid gap-3 rounded-2xl p-6">
           <h2 className="font-bold text-gold tracking-wider">
             How to create new blog post or photo ablum{" "}
           </h2>
-          <ul className="text-black text-base list-disc pt-2">
+          <ul className="text-black text-sm  grid gap-1 sm:text-base list-disc sm:pt-2 pt-1">
             <li>Create New Blog Post</li>
             <li>Fill out the form and input all the necessary details </li>
             <li>Compose Your Masterpiece</li>
