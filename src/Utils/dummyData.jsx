@@ -1,5 +1,6 @@
 import {GrBucket, GrGift, GrHome} from "react-icons/gr"
 import { IoIosArrowRoundForward, IoIosPerson} from "react-icons/io"
+import {GoHome} from "react-icons/go"
 import { FaArrowRightLong} from "react-icons/fa6"
 
 const BlogDummy = [
@@ -48,8 +49,8 @@ const BlogDummy = [
    export default BlogDummy;
 
    export const NavObject = [
-    {id:"1", name:"Home", icon:<GrHome/>, to:""},
-    {id:"2", name:"Profile", icon:<IoIosPerson/>, to:""},
-    {id:"3", name:"Explore", icon:<GrGift/>, to:""},
-    {id:"4", name:"Your Posts", icon:<GrBucket/>, to:""},
+    {id:"1", name:"Home", icon:<GoHome size={24}/>, to:"/dashboard"},
+    {id:"2", name:"Profile", icon:<IoIosPerson size={24}/>, to:"/dashboard/profile"},
+    {id:"3", name:"Explore", icon:<GrGift size={24}/>, to:"/dashboard/explore"},
+    {id:"4", name:"Your Posts", icon:<GrBucket size={24}/>, to:"/dashboard/your-posts"},
    ]
