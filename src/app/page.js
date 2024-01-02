@@ -259,8 +259,8 @@ export default function Home() {
               Key features of Memoverse
             </h2>
 
-            <div className="sm:grid sm:grid-cols-3 sm:gap-3   ">
-              <div className="border-2 bg-[#251206] rounded-lg mb-6 sm:mb-0 w-[340px] h-[230px] gap-4">
+            <div className="sm:grid sm:grid-cols-3 sm:gap-3  ">
+              <div className="border-2 bg-[#251206] rounded-lg mb-6 sm:mb-0 w-[340px] h-[330px] gap-4">
                 <div className=" grid place-content-center py-[10px]">
                   <img alt="" src="./icon1.png" />
                 </div>
@@ -275,7 +275,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="border-2 bg-[#251206] rounded-lg mb-6 sm:mb-0 w-[340px] h-[230px]">
+              <div className="border-2 bg-[#251206] rounded-lg mb-6 sm:mb-0 w-[340px] h-[330px]">
                 <div className=" grid place-content-center py-[10px]">
                   <img alt="" src="./icon2.png" />
                 </div>
@@ -289,7 +289,7 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className=" border-2 bg-[#251206] rounded-lg mb-6 sm:mb-0 w-[340px] h-[230px]">
+              <div className=" border-2 bg-[#251206] rounded-lg mb-6 sm:mb-0 w-[340px] h-[330px]">
                 <div className=" grid place-content-center py-[10px]">
                   <img alt="" src="./icon3.png" />
                 </div>
