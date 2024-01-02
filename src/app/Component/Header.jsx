@@ -1,4 +1,7 @@
+"use client"
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { gradientStyle } from "../Elements/GradientStyle";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -7,6 +10,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const path = usePathname()
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -15,7 +19,13 @@ export default function Header() {
   return (
     <header className="">
       <nav className="sm:grid sm:grid-cols-2">
-        <div style={gradientStyle}>
+        <div
+          className={`${
+            path !== "/"
+              ? "bg-darkBrown"
+              : "bg-gradient-to-r from-[#fddec5] to-[#fffbf7] backdrop-blur"
+          }`}
+        >
           <div
             className="sm:container
         sm:mx-auto  pt-[60px] pb-[20px] sm:pb-[0] sm:pt-[60px]"
@@ -24,10 +34,14 @@ export default function Header() {
               <img
                 className="w-[126px] h-[26px]"
                 alt="logo"
-                src="./MEMOVERSE (2).png"
+                src={`./MEMOVERSE (${path === "/" ? 2 : 1}).png`}
               />
 
-              <div className="hidden sm:flex  text-stone-950 text-semibold font-medium  space-x-4">
+              <div
+                className={`hidden sm:flex  ${
+                  path === "/" ? "text-darkBrown" : "text-white"
+                } text-semibold font-medium  space-x-4`}
+              >
                 <Link href="/">
                   <button className="">Home</button>
                 </Link>
@@ -43,12 +57,10 @@ export default function Header() {
                 <Link href="/dashboard">
                   <button>Dashboard</button>
                 </Link>
-
-                
               </div>
 
               <div className="md:hidden mb-4 ">
-                <button className="text-dark" onClick={toggleMenu}>
+                <button className="text-dark text-white" onClick={toggleMenu}>
                   {isOpen ? (
                     <FaTimes className="text-2xl" />
                   ) : (
@@ -60,7 +72,7 @@ export default function Header() {
           </div>
         </div>
 
-        <div className="hidden sm:grid bg-stone-950 ">
+        <div className="hidden sm:grid bg-darkBrown ">
           <div
             className=" sm:container
         mx-auto p-[60px]"

@@ -1,8 +1,10 @@
+
 import React from 'react'
 import { IoIosArrowDown } from 'react-icons/io'
 import Image from "next/image"
 import Profile from "../../../public/profile.jpeg"
 import Placeholder from "../../../public/Signin-Icon.png"
+import Link from "next/link"
 import Button from '../Component/Button'
 import BlogDummy from '@/Utils/dummyData'
 import BlogPost from '../Component/BlogPost'
@@ -66,7 +68,10 @@ const page = () => {
               A Decentralized Application for Creative Expression and Eternal
               Photo Albums
             </p>
+            <Link href="/post-blog" className='w-full'>
+
             <Button title="Post a blog" classname="w-full rounded-md py-1 px-2 text-sm" />
+            </Link>
           </div>
         </div>
 

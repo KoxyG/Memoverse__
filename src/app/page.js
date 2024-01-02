@@ -1,13 +1,18 @@
 "use client"
+
+import { lazy, useState } from "react";
+
 import Header from "./Component/Header";
 import { gradientStyle } from "./Elements/GradientStyle";
 import Card from "./Component/Card";
 import classNames from "classnames";
-import { useState } from "react";
 import BlogDummy from "@/Utils/dummyData";
-import BlogPost from "./Component/BlogPost";
-import Subscriber from "./Elements/Subscribe";
-import Footer from "./Component/Footer";
+const BlogPost = lazy(() => import("./Component/BlogPost"))
+const Subscriber = lazy(() => import("./Elements/Subscribe"))
+const Footer = lazy(() => import("./Component/Footer"))
+// import BlogPost from "./Component/BlogPost";
+// import Subscriber from "./Elements/Subscribe";
+// import Footer from "./Component/Footer";
 import Link from "next/link";
 
 export default function Home() {
@@ -121,7 +126,7 @@ export default function Home() {
           </section>
 
           {/* Right design */}
-          <section className="bg-stone-950">
+          <section className="bg-darkBrown">
             <div className="container mx-auto pt-[80px] px-8 sm:pl-[80px]">
               <div
                 className=" "
