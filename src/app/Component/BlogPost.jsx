@@ -1,10 +1,12 @@
+import Image from "next/image";
+
 function BlogPost(props) {
   const style = `sm:flex items-center gap-4 py-[40px] + ${props.classname}`
   return (
     <div >
       {/* first blog */}
       <div className={style}>
-        <img alt="" className='w-[249px] h-[240px]' src={props.imgSrc} />
+        <Image width={249} height={240} alt="" className='w-[249px] h-[240px]' src={props.imgSrc} />
         <div>
           <h3 className="text-orange-300 text-xl font-semibold leading-7">
             {props.title}
