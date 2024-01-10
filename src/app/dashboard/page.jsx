@@ -1,10 +1,8 @@
-
 import React from 'react'
 import { IoIosArrowDown } from 'react-icons/io'
 import Image from "next/image"
 import Profile from "../../../public/profile.jpeg"
-import Placeholder from "../../../public/Signin-Icon.png"
-import Link from "next/link"
+// import Placeholder from "../../../public/Signin-Icon.png"
 import Button from '../Component/Button'
 import BlogDummy from '@/Utils/dummyData'
 import BlogPost from '../Component/BlogPost'
@@ -52,7 +50,7 @@ const page = () => {
         {/* FOR THE POST A BLOG POST BANNER */}
         <div className="bg-lightGold sm:flex grid justify-between gap-2 sm:gap-5 w-full sm:w-3/5 rounded-2xl p-3">
           <Image
-            src={Placeholder}
+            src="./placeholder.png"
             alt="Digital creative illustration"
             objectFit="cover"
             objectPosition="center"
@@ -68,10 +66,7 @@ const page = () => {
               A Decentralized Application for Creative Expression and Eternal
               Photo Albums
             </p>
-            <Link href="/post-blog" className='w-full'>
-
             <Button title="Post a blog" classname="w-full rounded-md py-1 px-2 text-sm" />
-            </Link>
           </div>
         </div>
 
