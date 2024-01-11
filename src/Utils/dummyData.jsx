@@ -5,7 +5,7 @@ import { FaArrowRightLong} from "react-icons/fa6"
 
 const BlogDummy = [
   {
-    imgSrc: "./B-frame1.png",
+    imgSrc: "",
     id: 1,
     // more: <IoIosArrowRoundForward />,
     more: <FaArrowRightLong />,
@@ -14,7 +14,7 @@ const BlogDummy = [
       "From the majestic peaks of snow-capped mountains to the sun-kissed beaches with turquoise waters, each photograph becomes a window to a new world, inviting you to explore and dream",
   },
   {
-    imgSrc: "./B-frame2.png",
+    imgSrc: "/B-frame2.png",
     id: 2,
     title:
       "Memoirs of a Dreamer: Embracing Creativity and Artistry in Everyday Life",
@@ -25,7 +25,7 @@ const BlogDummy = [
       "Through the ups and downs, I've found solace in expressing myself through art, and I can't wait to hear your thoughts and connect with kindred spirits. Let's celebrate the magic of imagination together! 🌈 💫",
   },
   {
-    imgSrc: "./B-frame3.png",
+    imgSrc: "/B-frame3.png",
     id: 3,
     title: "Life Lessons and Growth: Reflections on Overcoming Challenges",
     // more: <IoIosArrowRoundForward />,
@@ -35,7 +35,7 @@ const BlogDummy = [
       "In this safe space, let's embrace vulnerability and wisdom as we connect through shared experiences. May my stories inspire you on your own path of growth and self-discovery. 🌿🌼",
   },
   {
-    imgSrc: "./B-frame4.png",
+    imgSrc: "/B-frame4.png",
     id: 4,
     // more: <IoIosArrowRoundForward />,
     more: <FaArrowRightLong />,

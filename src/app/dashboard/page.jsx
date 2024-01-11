@@ -50,11 +50,12 @@ const page = () => {
         {/* FOR THE POST A BLOG POST BANNER */}
         <div className="bg-lightGold sm:flex grid justify-between gap-2 sm:gap-5 w-full sm:w-3/5 rounded-2xl p-3">
           <Image
-            src="./placeholder.png"
+            src="/placeholder.png"
             alt="Digital creative illustration"
             objectFit="cover"
             objectPosition="center"
-            height="auto"
+            width={200}
+            height={200}
             priority
             className="block w-[60%] m-auto sm:w-1/2 h-auto"
           />
