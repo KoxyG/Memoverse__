@@ -26,8 +26,8 @@ export default function Header() {
               
                 alt="logo"
                 src="/MEMOVERSE (2).png"
-                width={120}
-                height={26}
+                width={100}
+                height={100}
               />
 
               <div className="hidden sm:flex  text-stone-950 text-semibold font-medium  space-x-4">
@@ -105,7 +105,7 @@ export default function Header() {
           <Link href="/SignIn">
             <div className="flex">
               <button className=" bg-gradient-to-r from-orange-400 px-5 py-2.5  to-orange-400 text-white rounded-sm text-center ">
-                SignIn
+                Connect Wallet
               </button>
             </div>
           </Link>
