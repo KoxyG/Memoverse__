@@ -3,9 +3,16 @@ import { IoIosArrowRoundForward, IoIosPerson} from "react-icons/io"
 import {GoHome} from "react-icons/go"
 import { FaArrowRightLong} from "react-icons/fa6"
 
+
+// IMAGES FOR BLOG POST
+import FirstImage from "../../public/B-frame1.png"
+import SecondImage from "../../public/B-frame2.png"
+import ThirdImage from "../../public/B-frame3.png"
+import FourthImage from "../../public/B-frame4.png"
+
 const BlogDummy = [
   {
-    imgSrc: "./B-frame1.png",
+    imgSrc: FirstImage,
     id: 1,
     // more: <IoIosArrowRoundForward />,
     more: <FaArrowRightLong />,
@@ -14,7 +21,7 @@ const BlogDummy = [
       "From the majestic peaks of snow-capped mountains to the sun-kissed beaches with turquoise waters, each photograph becomes a window to a new world, inviting you to explore and dream",
   },
   {
-    imgSrc: "./B-frame2.png",
+    imgSrc: SecondImage,
     id: 2,
     title:
       "Memoirs of a Dreamer: Embracing Creativity and Artistry in Everyday Life",
@@ -25,7 +32,7 @@ const BlogDummy = [
       "Through the ups and downs, I've found solace in expressing myself through art, and I can't wait to hear your thoughts and connect with kindred spirits. Let's celebrate the magic of imagination together! 🌈 💫",
   },
   {
-    imgSrc: "./B-frame3.png",
+    imgSrc: ThirdImage,
     id: 3,
     title: "Life Lessons and Growth: Reflections on Overcoming Challenges",
     // more: <IoIosArrowRoundForward />,
@@ -35,7 +42,7 @@ const BlogDummy = [
       "In this safe space, let's embrace vulnerability and wisdom as we connect through shared experiences. May my stories inspire you on your own path of growth and self-discovery. 🌿🌼",
   },
   {
-    imgSrc: "./B-frame4.png",
+    imgSrc: FourthImage,
     id: 4,
     // more: <IoIosArrowRoundForward />,
     more: <FaArrowRightLong />,

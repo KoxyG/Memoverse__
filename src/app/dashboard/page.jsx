@@ -13,39 +13,7 @@ const page = () => {
   return (
     <section className="text-white">
       {/* THIS SECTION IS FOR THE TOP MOST LAYER OF THE MAIN BODY OF THE DASHBOARD */}
-      <div className="grid sm:flex justify-between">
-        <div className="sm:w-2/5 w-full grid gap-2">
-          <h2>Welcome to Memoverse.</h2>
-          <p className="text-sm font-thin">Hello Primrose, welcome back!</p>
-        </div>
-
-        <div className="sm:w-3/5 w-full grid gap-2">
-          <div className="sm:flex grid justify-evenly items-center">
-            <div className="flex items-center gap-3">
-              <Image
-                src={Profile}
-                alt="logged in user's profile picture"
-                objectFit="cover"
-                objectPosition="center"
-                className="rounded-full w-8 h-8"
-              />
-              <p>Primrose Roberts</p>
-            </div>
-            <div className="font-bold text-gold flex justify-between mt-3 sm:mt-0 gap-5">
-              <p>
-                900 <span className="font-normal text-white">Following</span>
-              </p>
-              <p>
-                120 <span className="font-normal text-white ">Blog Posts</span>
-              </p>
-              <p>
-                12k <span className="font-normal text-white">Followers</span>
-              </p>
-            </div>
-          </div>
-          <p className="text-sm font-thin">Follow my journey explorers</p>
-        </div>
-      </div>
+     
 
       {/* THIS SECTION IS FOR THE POST A BLOG AND HOW TO POST A BLOG INSTRUCTION BANNER */}
       <div className="sm:flex sm:gap-7 grid gap-3 justify-between mt-6">
