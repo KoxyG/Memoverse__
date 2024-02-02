@@ -21,25 +21,47 @@ export default function Header() {
             className=" sm:container
         sm:mx-auto  pt-[60px] pb-[20px] sm:pb-[0] sm:pt-[60px]"
           >
-            <div className=" sm:pl-[80px] flex justify-between container mx-auto px-8">
-              <Image
-              
+
+            <div className=" sm:pl-[80px] flex justify-between container mx-auto px-6">
+              <img
+                className="w-[126px] h-[26px]"
                 alt="logo"
                 src="/MEMOVERSE (2).png"
                 width={100}
                 height={100}
               />
 
-              <div className="hidden sm:flex  text-stone-950 text-semibold font-medium  space-x-4">
-                <Link href="/">
+
+              <div
+                className={`hidden sm:flex  ${
+                  path === "/" ? "text-darkBrown" : "text-white"
+                } text-semibold font-medium  space-x-6`}
+              >
+                <Link
+                  href="/"
+                  className={`${
+                    path === "/"  ? "text-gold" : "text-white"
+                  } text-black` }
+                >
+
                   <button className="">Home</button>
                 </Link>
 
-                <Link href="/explore">
+                <Link
+                  href="/explore"
+                  className={`${
+                    path === "/explore" ? "text-gold" : "text-white"
+                  } text-black`}
+                >
                   <button>Explore</button>
                 </Link>
 
-                <Link href="/about-us">
+                <Link
+                  href="/about-us"
+                  className={`${
+                    path === "/about-us" ? "text-gold" : "text-white"
+                  } text-black`}
+                >
                   <button>About us</button>
                 </Link>
 

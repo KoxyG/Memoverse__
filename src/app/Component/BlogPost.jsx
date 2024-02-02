@@ -1,12 +1,28 @@
-import Image from "next/image";
+
+"use client"
+
+import { usePathname } from "next/navigation";
+import Image from "next/image"
+
+
 
 function BlogPost(props) {
-  const style = `sm:flex items-center gap-4 py-[40px] + ${props.classname}`
+  const path = usePathname()
+  // console.log(props.imgSrc);
+
+  const style = `
+  // ${path !== "/dashboard" ? "grid" : "sm:flex grid"}  
+  text-xs m-2  gap-4 py-[40px]
+  ${props.classname}
+`;
+
   return (
-    <div >
+    <div className="flex">
       {/* first blog */}
       <div className={style}>
-        <Image width={249} height={240} alt="" className='w-[249px] h-[240px]' src={props.imgSrc} />
+
+        {/* <img alt="" className='w-[249px] h-[240px]' src={props.imgSrc} /> */}
+        <Image className="max-w-[300px] h-[auto]" alt="blog post image" src={props.imgSrc}/>
         <div>
           <h3 className="text-orange-300 text-xl font-semibold leading-7">
             {props.title}
