@@ -1,16 +1,13 @@
-"use client"
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { gradientStyle } from "../Elements/GradientStyle";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import Image from "next/image";
 
 
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const path = usePathname()
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -19,23 +16,21 @@ export default function Header() {
   return (
     <header className="">
       <nav className="sm:grid sm:grid-cols-2">
-        <div
-          className={`${
-            path !== "/"
-              ? "bg-darkBrown"
-              : "bg-gradient-to-r from-[#fddec5] to-[#fffbf7] backdrop-blur"
-          }`}
-        >
+        <div className="" style={gradientStyle}>
           <div
-            className="sm:container
+            className=" sm:container
         sm:mx-auto  pt-[60px] pb-[20px] sm:pb-[0] sm:pt-[60px]"
           >
+
             <div className=" sm:pl-[80px] flex justify-between container mx-auto px-6">
               <img
                 className="w-[126px] h-[26px]"
                 alt="logo"
-                src={`./MEMOVERSE (${path === "/" ? 2 : 1}).png`}
+                src="/MEMOVERSE (2).png"
+                width={100}
+                height={100}
               />
+
 
               <div
                 className={`hidden sm:flex  ${
@@ -48,6 +43,7 @@ export default function Header() {
                     path === "/"  ? "text-gold" : "text-white"
                   } text-black` }
                 >
+
                   <button className="">Home</button>
                 </Link>
 
@@ -72,10 +68,12 @@ export default function Header() {
                 <Link href="/dashboard">
                   <button>Dashboard</button>
                 </Link>
+
+                
               </div>
 
               <div className="md:hidden mb-4 ">
-                <button className="text-dark text-white" onClick={toggleMenu}>
+                <button className="text-dark" onClick={toggleMenu}>
                   {isOpen ? (
                     <FaTimes className="text-2xl" />
                   ) : (
@@ -87,7 +85,7 @@ export default function Header() {
           </div>
         </div>
 
-        <div className="hidden sm:grid bg-darkBrown ">
+        <div className="hidden sm:grid bg-stone-950 ">
           <div
             className=" sm:container
         mx-auto p-[60px]"
@@ -129,7 +127,7 @@ export default function Header() {
           <Link href="/SignIn">
             <div className="flex">
               <button className=" bg-gradient-to-r from-orange-400 px-5 py-2.5  to-orange-400 text-white rounded-sm text-center ">
-                SignIn
+                Connect Wallet
               </button>
             </div>
           </Link>

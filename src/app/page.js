@@ -1,19 +1,16 @@
-"use client"
-
-import { lazy, useState } from "react";
-
+"use client";
 import Header from "./Component/Header";
 import { gradientStyle } from "./Elements/GradientStyle";
 import Card from "./Component/Card";
 import classNames from "classnames";
+import { useState } from "react";
 import BlogDummy from "@/Utils/dummyData";
-const BlogPost = lazy(() => import("./Component/BlogPost"))
-const Subscriber = lazy(() => import("./Elements/Subscribe"))
-const Footer = lazy(() => import("./Component/Footer"))
-// import BlogPost from "./Component/BlogPost";
+import BlogPost from "./Component/BlogPost";
+import AchievementsSection from "./Elements/AchievementsSection";
 // import Subscriber from "./Elements/Subscribe";
-// import Footer from "./Component/Footer";
+import Footer from "./Component/Footer";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   const [isHover, setHover] = useState(false);
@@ -21,13 +18,15 @@ export default function Home() {
   return (
     <div>
       <div className="">
+        <div className="">
         <Header />
+        </div>
 
         {/* First section */}
         <div className="sm:grid sm:grid-cols-2">
           {/* Left design */}
           <section
-            className="container mx-auto px-8 sm:pl-[80px]"
+            className="z-30 container mx-auto px-8 sm:pl-[80px]"
             style={gradientStyle}
           >
             <div className="pb-[61px]">
@@ -66,17 +65,20 @@ export default function Home() {
                   onMouseOver={() => setHover(true)}
                   onMouseLeave={() => setHover(false)}
                 >
-                  <div className="overflow-hidden cursor-pointer border-2 border-white rounded-sm w-[244px] h-[155px] ">
-                    <img
-                      src="./Frame (2) (1).png"
+                  <div className=" overflow-hidden cursor-pointer border-2 border-white rounded-sm w-[244px] h-[155px] ">
+                    <Image
+                      src="/Frame (2) (1).png"
                       alt="trending blog"
                       className={classNames({
                         "scale-110 transition-transform": isHover,
                       })}
+                      width={500}
+                      height={500}
+                      
                     />
                   </div>
 
-                  <Card className="rounded-none w-[243px] h-[124px]">
+                  <Card className=" bg-[#625a55] rounded-none w-[243px] h-[124px]">
                     <h4 className=" p-[14px] text-white pb-2 text-base font-semibold leading-snug">
                       Journey through Time
                     </h4>
@@ -98,16 +100,18 @@ export default function Home() {
                   onMouseLeave={() => setHover(false)}
                 >
                   <div className="cursor-pointer overflow-hidden border-2 border-white rounded-sm w-[244px] h-[155px] ">
-                    <img
-                      src="./Frame (1).png"
+                    <Image
+                      src="/Frame (1).png"
                       alt="trending blog"
                       className={classNames({
                         "scale-110 transition-transform": isHover,
                       })}
+                      width={500}
+                      height={500}
                     />
                   </div>
 
-                  <Card className="rounded-none w-[243px] h-[124px]">
+                  <Card className=" bg-[#625a55]  rounded-none w-[243px] h-[124px]">
                     <h4 className=" p-[14px] text-white pb-2 text-base font-semibold leading-snug">
                       Memoirs of a Dreamer
                     </h4>
@@ -126,20 +130,23 @@ export default function Home() {
           </section>
 
           {/* Right design */}
-          <section className="bg-darkBrown">
+          <section className="bg-stone-950">
             <div className="container mx-auto pt-[80px] px-8 sm:pl-[80px]">
               <div
                 className=" "
                 onMouseOver={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
               >
+                <div className="">
                 <div
                   className="overflow-hidden align-middle 
                   cursor-pointer w-[350.87px] h-[300px] rounded-tl-full 
-                  rounded-tr-full shadow border border-white "
+                  rounded-tr-full "
                 >
-                  <img
-                    src="./placeholder.png"
+                  <Image
+                    src="/placeholder.png"
+                    width={350.87}
+                    height={300}
                     alt="trending blog"
                     className={classNames({
                       "scale-110 transition-transform": isHover,
@@ -155,43 +162,17 @@ export default function Home() {
                     dream
                   </p>
                 </Card>
-              </div>
-
-              <div className="grid grid-cols-3 pt-[80px]">
-                <div className="flex gap-4 sm:gap-6">
-                  <h2 className="text-orange-300 text-2xl sm:text-3xl font-bold leading-7 sm:leading-9">
-                    50k+
-                  </h2>
-                  <p className="text-white text-[13px] sm:text-base font-normal leading-snug pt-2">
-                    Users
-                  </p>
-                </div>
-
-                <div className="flex gap-4 sm:gap-6">
-                  <h2 className="text-orange-300 text-2xl sm:text-3xl font-bold leading-7 sm:leading-9">
-                    30k+
-                  </h2>
-                  <p className="text-white text-[10px] sm:text-base font-normal leading-snug pt-2">
-                    Blog plosts
-                  </p>
-                </div>
-
-                <div className="flex gap-4 sm:gap-6">
-                  <h2 className="text-orange-300 text-2xl sm:text-3xl font-bold leading-7 sm:leading-9">
-                    20k+
-                  </h2>
-                  <p className="text-white text-[13px] sm:text-base font-normal leading-snug pt-2">
-                    Albums
-                  </p>
                 </div>
               </div>
+              {/* Archievement section */}
+              <AchievementsSection />
             </div>
           </section>
         </div>
 
         {/* Second section */}
         <div className="bg-stone-950">
-          <div className="container mx-auto px-8 sm:px-[80px] py-[100px]">
+          <div className=" px-8 sm:px-[80px] py-[100px]">
             <h2 className="text-white text-3xl pb-[48px] font-bold leading-10">
               Welcome to Memoverse, where creativity <br /> meets blockchain
               technology
@@ -249,7 +230,7 @@ export default function Home() {
 
         {/* Third section */}
         <div className="bg-stone-950">
-          <div className="container mx-auto px-8 sm:px-[80px] pb-[100px]">
+          <div className="px-8 sm:px-[80px] pb-[100px]">
             <div className="flex justify-between">
               {/* Header */}
               <h3 className="text-white sm:text-3xl font-bold leading-10">
@@ -278,17 +259,17 @@ export default function Home() {
         {/* Fourth section */}
         <div className="bg-stone-950">
           <div
-            className="container mx-auto px-8
+            className=" px-8
            sm:px-[80px] pb-[100px]"
           >
             <h2 className="text-white text-3xl pb-[30px] font-bold leading-10">
               Key features of Memoverse
             </h2>
 
-            <div className="sm:grid sm:grid-cols-3 sm:gap-3   ">
-              <div className="border-2 bg-[#251206] rounded-lg mb-6 sm:mb-0 w-[340px] h-[230px] gap-4">
+            <div className="sm:grid sm:grid-cols-3 sm:gap-3  ">
+              <div className="border-2 bg-[#251206] rounded-lg mb-6 sm:mb-0 w-[340px] h-[330px] gap-4">
                 <div className=" grid place-content-center py-[10px]">
-                  <img alt="" src="./icon1.png" />
+                  <Image width={50} height={50} alt="" src="/icon1.png" />
                 </div>
                 <h2 className="text-white text-xl  text-center font-bold leading-loose">
                   Creative Writing Tools
@@ -301,9 +282,9 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="border-2 bg-[#251206] rounded-lg mb-6 sm:mb-0 w-[340px] h-[230px]">
+              <div className="border-2 bg-[#251206] rounded-lg mb-6 sm:mb-0 w-[340px] h-[330px]">
                 <div className=" grid place-content-center py-[10px]">
-                  <img alt="" src="./icon2.png" />
+                  <Image alt="" width={50}  height={50} src="/icon2.png" />
                 </div>
                 <h2 className="text-white text-xl  text-center font-bold leading-loose">
                   Eternal Photo Albums
@@ -315,9 +296,9 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className=" border-2 bg-[#251206] rounded-lg mb-6 sm:mb-0 w-[340px] h-[230px]">
+              <div className=" border-2 bg-[#251206] rounded-lg mb-6 sm:mb-0 w-[340px] h-[330px]">
                 <div className=" grid place-content-center py-[10px]">
-                  <img alt="" src="./icon3.png" />
+                  <Image alt="" width={50} height={50} src="/icon3.png" />
                 </div>
                 <h2 className="text-white text-xl  text-center font-bold leading-loose">
                   Community and Collaboration
@@ -333,15 +314,12 @@ export default function Home() {
         </div>
 
         {/* Fifth section */}
-        <div className="bg-stone-950">
-          <div className="container mx-auto  sm:px-[80px] pb-[100px]">
+        <div className="bg-stone-950 ">
+          <div className=" sm:px-[80px] pb-[100px] z-10">
             <div style={gradientStyle} className="rounded-md">
               <div className="sm:flex sm:justify-between  py-[40px] px-[100px]">
-                <div className="hidden  sm:grid sm:w-[317px] sm:h-[312px]">
-                  <img
-                    src="./SignIn-Icon.png"
-                    alt="illustration"
-                  />
+                <div className="sm:grid sm:w-[317px] sm:h-[312px]">
+                  <Image width={217} height={212} src="/SignIn-Icon.png" alt="illustration" />
                 </div>
 
                 <div className="">
@@ -355,7 +333,7 @@ export default function Home() {
                     <br /> special offers right in your inbox.
                   </p>
 
-                  <Subscriber />
+                  {/* <Subscriber /> */}
                 </div>
               </div>
             </div>
