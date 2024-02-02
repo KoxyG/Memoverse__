@@ -1,5 +1,4 @@
-// import LoginComponent from "../Blockchain_Service/ConnectWallet";
-// import SDKDemo from "../Blockchain_Service/SignInOthent";
+import LogIn from "../Component/LogIn";
 import { gradientStyle } from "../Elements/GradientStyle";
 import Image from "next/image";
 
@@ -43,6 +42,9 @@ export default function SignIn() {
           <h1 className="text-center pt-[100px] pb-[70px] text-white text-[44px] font-bold leading-[58px]">
             Sign in
           </h1>
+          <div className="flex justify-center pt-[50px]">
+          <LogIn />
+          </div>
         </div>
       </section>
     </div>

@@ -88,9 +88,7 @@ export default function Header() {
                   <button>About us</button>
                 </Link>
 
-                <Link href="/dashboard">
-                  <button>Dashboard</button>
-                </Link>
+                
 
                 
               </div>
@@ -143,9 +141,20 @@ export default function Header() {
           <h3 className="text-white text-sm font-normal leading-none">
             <Link href="/">Home</Link>
           </h3>
+          
+
           <h3 className="text-white text-sm font-normal leading-none">
-            <Link href="/dashboard">Dashboard</Link>
+          <Link href="/explore">
+                  <button>Explore</button>
+                </Link>
           </h3>
+          
+          <h3 className="text-white text-sm font-normal leading-none">
+                <Link href="/about-us">
+                  <button>About us</button>
+                </Link>
+          </h3>
+
 
           <Link href="/SignIn">
             <div className="flex">
