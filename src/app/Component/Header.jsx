@@ -1,9 +1,12 @@
 "use client"
 
 import Link from "next/link";
+import Image from "next/image"
 import { usePathname } from "next/navigation";
 import { gradientStyle } from "../Elements/GradientStyle";
 import { useState } from "react";
+import Logo1 from "../../../public/MEMOVERSE (1).png"
+import Logo2 from "../../../public/MEMOVERSE (1).png"
 import { FaBars, FaTimes } from "react-icons/fa";
 
 
@@ -31,11 +34,29 @@ export default function Header() {
         sm:mx-auto  pt-[60px] pb-[20px] sm:pb-[0] sm:pt-[60px]"
           >
             <div className=" sm:pl-[80px] flex justify-between container mx-auto px-6">
-              <img
+              {/* <img
                 className="w-[126px] h-[26px]"
                 alt="logo"
                 src={`./MEMOVERSE (${path === "/" ? 2 : 1}).png`}
-              />
+              /> */}
+
+              {path === "/" ? (
+                <Image
+                  src={Logo1}
+                  width={126}
+                  height={26}
+                  className="w-[126px] h-[26px]"
+                  alt="Logo"
+                />
+              ) : (
+                <Image
+                  src={Logo2}
+                  width={126}
+                  height={26}
+                  className="w-[126px] h-[26px]"
+                  alt="Logo"
+                />
+              )}
 
               <div
                 className={`hidden sm:flex  ${
@@ -45,8 +66,8 @@ export default function Header() {
                 <Link
                   href="/"
                   className={`${
-                    path === "/"  ? "text-gold" : "text-white"
-                  } text-black` }
+                    path === "/" ? "text-gold" : "text-white"
+                  } text-black`}
                 >
                   <button className="">Home</button>
                 </Link>

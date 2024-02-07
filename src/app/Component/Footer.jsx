@@ -1,6 +1,8 @@
 import { FaTwitter } from "react-icons/fa";
 import { SiDiscord } from "react-icons/si";
 import { HiOutlineMail } from "react-icons/hi";
+import Image from "next/image"
+import Logo from "../../../public/MEMOVERSE (1).png"
 
 function Footer() {
   return (
@@ -36,7 +38,7 @@ function Footer() {
 
           <div className="md:w-[519px] pb-[60px] md:h-[88px] my-[40px]  md:mt-[20px]">
           <div className="flex flex-row items-center gap-4">
-            <img alt="logo" src="./MEMOVERSE (1).png"/>
+           <Image src={Logo} className="" alt="Logo"/>
            
           </div>
           

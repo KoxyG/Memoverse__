@@ -7,10 +7,12 @@ import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
 import Header from "../Component/Header";
 import Footer from "../Component/Footer";
+import Modal from "./Modal";
 // import { getBundlr } from "../Blockchain_Service";
 // import { Othent } from "othent";
 
 export default function BlogPage() {
+  const [modal, SetModal] = useState(false)
   const [title, setTitle] = useState("");
   const [tagline, setTagline] = useState("");
   const [content, setContent] = useState("");
@@ -145,6 +147,7 @@ export default function BlogPage() {
 
         setLoading(false);
         resetForm();
+        SetModal(true)
 
         toast.success("Nft successfully minted!");
       } catch (error) {
@@ -156,6 +159,9 @@ export default function BlogPage() {
 
   return (
     <div>
+      {modal && <div className="h-screen ">
+        <Modal/>
+        </div>}
       <Header />
       <div className="bg-stone-950">
         <div className="justify-center align-center">
