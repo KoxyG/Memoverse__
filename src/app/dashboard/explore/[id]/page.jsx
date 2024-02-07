@@ -1,40 +1,33 @@
 import React from "react";
 import BlogPost from "@/app/Component/BlogPost";
 import BlogDummy from "@/Utils/dummyData";
-import View from "../../../../public/profile.jpeg";
+import View from "../../../../../public/profile.jpeg";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "@/app/Component/Button";
 import { GrFavorite } from "react-icons/gr";
-import BlogImage from "../../../../public/B-frame4.png";
-import Header from "@/app/Component/Header";
-import Footer from "@/app/Component/Footer";
 
-const page = ({params}) => {
-
-  const id = params.id
+const page = ({ params }) => {
+  const id = params.id;
 
   return (
     <main className="w-full bg-darkBrown">
-      <Header />
-
-      <section className="w-[90%] mx-auto py-6 grid sm:flex justify-between">
+      <section className="sm:w-[90%] sm:mx-auto py-6 grid sm:flex justify-between my-5 w-full">
         {BlogDummy.filter((blog) => blog.id === +id).map((data) => (
           <div className="w-full sm:w-[57%] text-white" key={data.id}>
-            <div className="text-center grid gap-5">
-              <h1 className="font-bold text-3xl text-gold border-b border-white pb-10 relative">
-                {data.title}
-              </h1>
-              <div className="bg-darkBrown absolute hidden   sm:top-[48%] sm:left-1/4 px-8 w-auto h-auto sm:grid">
-                <span >
-                  01/03/2023
-                </span>
+            <div className="text-center grid gap-y-5 ">
+              <div className="relative">
+                <h1 className="font-bold text-xl sm:text-3xl text-gold border-b border-white pb-10 relative">
+                  {data.title}
+                </h1>
+                <div className="bg-darkBrown absolute -bottom-2 left-[35%] sm:px-8 px-5 w-auto h-auto grid text-sm sm:text-base">
+                  <span>01/03/2023</span>
+                </div>
               </div>
-              <div className="bg-darkBrown absolute sm:hidden  bottom-1/3 right-1/3 px-8 w-auto h-auto grid">
-                <span >
-                  01/03/2023
-                </span>
-              </div>
+
+              {/* <div className="bg-darkBrown absolute sm:hidden  bottom-1/3 right-1/3 px-8 w-auto h-auto grid">
+                <span>01/03/2023</span>
+              </div> */}
 
               <div className="text-center flex mx-auto justify-center">
                 <p className="flex items-center gap-5">
@@ -45,7 +38,7 @@ const page = ({params}) => {
                   </span>
                 </p>
               </div>
-              <div className="flex w-full sm:w-3/5 mx-auto justify-around">
+              <div className="flex w-full sm:w-4/5 mx-auto justify-around">
                 <Button
                   title="Edit Post"
                   type="button"
@@ -65,9 +58,10 @@ const page = ({params}) => {
               <div className="py-5 grid gap-5">
                 <Image
                   src={data.imgSrc}
-                  className="w-full rounded-md h-[320px] block"
+                  className="rounded-md w-full h-[320px] block"
                 />
-                <div className="grid gap-5 text-justify">
+
+                <div className="grid gap-y-5 text-justify text-sm sm:text-base">
                   <p>{data.content}</p>
                   <p>
                     From the iconic landmarks of bustling cities to the hidden
@@ -121,6 +115,7 @@ const page = ({params}) => {
                     of unforgettable adventures around the world! 🌏🌟🚀
                   </p>
                 </div>
+                
               </div>
             </div>
           </div>
@@ -131,6 +126,7 @@ const page = ({params}) => {
             Top match blogs for you
           </p>
           {BlogDummy.filter((data) => data.id !== +id).map((Blog) => (
+            <Link href={`/dashboard/explore/${Blog.id}`}>
             <BlogPost
               key={Blog.id} // Add the 'key' prop with a unique identifier
               imgSrc={Blog.imgSrc}
@@ -138,11 +134,11 @@ const page = ({params}) => {
               content={Blog.content}
               more={Blog.more}
               classname="grid"
-            />
+              />
+              </Link>
           ))}
         </div>
       </section>
-      <Footer />
     </main>
   );
 };
