@@ -12,7 +12,10 @@ import Image from "next/image";
 
 
 
+
 export default function Header() {
+
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -56,15 +59,18 @@ export default function Header() {
 
 
               <div
-                className={`hidden sm:flex  ${
-                  path === "/" ? "text-darkBrown" : "text-white"
-                } text-semibold font-medium  space-x-6`}
+              className="hidden sm:flex text-semibold font-medium  text-darkBrown space-x-6"
+               
               >
                 <Link
                   href="/"
+<<<<<<< HEAD
                   className={`${
                     path === "/" ? "text-gold" : "text-white"
                   } text-black`}
+=======
+                  className="text-black text-bold"
+>>>>>>> 297b290 (stashing)
                 >
 
                   <button className="">Home</button>
@@ -72,18 +78,14 @@ export default function Header() {
 
                 <Link
                   href="/explore"
-                  className={`${
-                    path === "/explore" ? "text-gold" : "text-white"
-                  } text-black`}
+                  className="text-black text-bold"
                 >
                   <button>Explore</button>
                 </Link>
 
                 <Link
                   href="/about-us"
-                  className={`${
-                    path === "/about-us" ? "text-gold" : "text-white"
-                  } text-black`}
+                  className="text-black text-bold"
                 >
                   <button>About us</button>
                 </Link>
