@@ -20,6 +20,7 @@ const page = () => {
         <div>
           <div className="sm:grid grid-cols-1 gap-5 sm:grid-cols-3">
             {BlogDummy.map((Blog) => (
+              <Link href={`/explore/${Blog.id}`}>
               <BlogPost
                 key={Blog.id} // Add the 'key' prop with a unique identifier
                 imgSrc={Blog.imgSrc}
@@ -27,7 +28,8 @@ const page = () => {
                 content={Blog.content}
                 more={Blog.more}
                 classname="px-6"
-              />
+                />
+                </Link>
             ))}
           </div>
         </div>

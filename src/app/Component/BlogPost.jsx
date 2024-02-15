@@ -11,8 +11,8 @@ function BlogPost(props) {
   // console.log(props.imgSrc);
 
   const style = `
-  // ${path !== "/dashboard" ? "grid" : "sm:flex grid"}  
-  text-xs m-2  gap-4 py-[40px]
+   ${path !== "/dashboard" ? "grid" : "sm:flex grid"}  
+  text-xs m-2  gap-4 py-[20px]
   ${props.classname}
 `;
 
@@ -22,7 +22,7 @@ function BlogPost(props) {
       <div className={style}>
 
         {/* <img alt="" className='w-[249px] h-[240px]' src={props.imgSrc} /> */}
-        <Image className="max-w-[300px] h-[auto]" alt="blog post image" src={props.imgSrc}/>
+        <Image className="max-w-full h-[auto]" alt="blog post image" src={props.imgSrc}/>
         <div>
           <h3 className="text-orange-300 text-xl font-semibold leading-7">
             {props.title}

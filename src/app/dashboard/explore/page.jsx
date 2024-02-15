@@ -1,6 +1,7 @@
 import BlogDummy from '@/Utils/dummyData';
 import BlogPost from '@/app/Component/BlogPost';
 import React from 'react'
+import Link from "next/link"
 
 const page = () => {
   return (
@@ -10,7 +11,7 @@ const page = () => {
         <div className="sm:grid grid-cols-1 gap-3 sm:grid-cols-2">
           {BlogDummy.map((Blog) => (
             
-            
+            <Link href={`/dashboard/explore/${Blog.id}`}>
             <BlogPost
               key={Blog.id} // Add the 'key' prop with a unique identifier
               imgSrc={Blog.imgSrc}
@@ -19,6 +20,7 @@ const page = () => {
               more={Blog.more}
               classname="px-6 grid"
             />
+              </Link>
           ))}
         </div>
       </div>

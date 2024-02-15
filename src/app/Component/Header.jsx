@@ -1,6 +1,12 @@
 import Link from "next/link";
+
+import Image from "next/image"
+import { usePathname } from "next/navigation";
+
 import { gradientStyle } from "../Elements/GradientStyle";
 import { useState } from "react";
+import Logo1 from "../../../public/MEMOVERSE (1).png"
+import Logo2 from "../../../public/MEMOVERSE (1).png"
 import { FaBars, FaTimes } from "react-icons/fa";
 import Image from "next/image";
 
@@ -23,13 +29,30 @@ export default function Header() {
           >
 
             <div className=" sm:pl-[80px] flex justify-between container mx-auto px-6">
-              <img
+              {/* <img
                 className="w-[126px] h-[26px]"
                 alt="logo"
-                src="/MEMOVERSE (2).png"
-                width={100}
-                height={100}
-              />
+                src={`./MEMOVERSE (${path === "/" ? 2 : 1}).png`}
+              /> */}
+
+              {path === "/" ? (
+                <Image
+                  src={Logo1}
+                  width={126}
+                  height={26}
+                  className="w-[126px] h-[26px]"
+                  alt="Logo"
+                />
+              ) : (
+                <Image
+                  src={Logo2}
+                  width={126}
+                  height={26}
+                  className="w-[126px] h-[26px]"
+                  alt="Logo"
+                />
+              )}
+
 
 
               <div
@@ -40,8 +63,8 @@ export default function Header() {
                 <Link
                   href="/"
                   className={`${
-                    path === "/"  ? "text-gold" : "text-white"
-                  } text-black` }
+                    path === "/" ? "text-gold" : "text-white"
+                  } text-black`}
                 >
 
                   <button className="">Home</button>
