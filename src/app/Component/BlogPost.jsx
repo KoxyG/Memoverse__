@@ -1,7 +1,9 @@
+
 "use client"
 
 import { usePathname } from "next/navigation";
 import Image from "next/image"
+
 
 
 function BlogPost(props) {
@@ -18,6 +20,7 @@ function BlogPost(props) {
     <div className="flex">
       {/* first blog */}
       <div className={style}>
+
         {/* <img alt="" className='w-[249px] h-[240px]' src={props.imgSrc} /> */}
         <Image className="max-w-full h-[auto]" alt="blog post image" src={props.imgSrc}/>
         <div>
