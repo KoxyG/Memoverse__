@@ -1,14 +1,13 @@
+"use client";
 import Link from "next/link";
-
-import Image from "next/image"
 import { usePathname } from "next/navigation";
-
 import { gradientStyle } from "../Elements/GradientStyle";
 import { useState } from "react";
 import Logo1 from "../../../public/MEMOVERSE (1).png"
-import Logo2 from "../../../public/MEMOVERSE (1).png"
+import Logo2 from "../../../public/MEMOVERSE (2).png"
 import { FaBars, FaTimes } from "react-icons/fa";
 import Image from "next/image";
+import path from "path";
 
 
 
@@ -37,7 +36,6 @@ export default function Header() {
                 alt="logo"
                 src={`./MEMOVERSE (${path === "/" ? 2 : 1}).png`}
               /> */}
-
               {path === "/" ? (
                 <Image
                   src={Logo1}
@@ -64,14 +62,9 @@ export default function Header() {
               >
                 <Link
                   href="/"
-<<<<<<< HEAD
-                  className={`${
-                    path === "/" ? "text-gold" : "text-white"
-                  } text-black`}
-=======
                   className="text-black text-bold"
->>>>>>> 297b290 (stashing)
                 >
+
 
                   <button className="">Home</button>
                 </Link>

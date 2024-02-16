@@ -8,8 +8,7 @@ import { useState } from "react";
 import Header from "../Component/Header";
 import Footer from "../Component/Footer";
 import Modal from "./Modal";
-// import { getBundlr } from "../Blockchain_Service";
-// import { Othent } from "othent";
+
 
 export default function BlogPage() {
   const [modal, SetModal] = useState(false)

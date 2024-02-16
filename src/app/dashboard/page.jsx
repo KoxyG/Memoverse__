@@ -6,6 +6,7 @@ import Profile from "../../../public/profile.jpeg"
 import Button from '../Component/Button'
 import BlogDummy from '@/Utils/dummyData'
 import BlogPost from '../Component/BlogPost'
+import Link from 'next/link'
 
 const page = () => {
   return (
@@ -35,7 +36,9 @@ const page = () => {
               A Decentralized Application for Creative Expression and Eternal
               Photo Albums
             </p>
+            <Link href="/post-blog">
             <Button title="Post a blog" classname="w-full rounded-md py-1 px-2 text-sm" />
+            </Link>
           </div>
         </div>
 

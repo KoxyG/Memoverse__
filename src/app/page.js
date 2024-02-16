@@ -56,7 +56,7 @@ export default function Home() {
 
             <div>
               <h3 className="text-stone-950 text-2xl font-bold leading-loose">
-                Trending Blog posts{" "}
+                Trending Blog post{" "}
               </h3>
 
               <div className="sm:grid sm:grid-cols-2 pb-[60px]">
@@ -94,7 +94,7 @@ export default function Home() {
                   </Card>
                 </div>
 
-                <div
+                {/* <div
                   className=" pt-[30px] sm:pt-0"
                   onMouseOver={() => setHover(true)}
                   onMouseLeave={() => setHover(false)}
@@ -124,7 +124,8 @@ export default function Home() {
                       me in embracing artistry
                     </p>
                   </Card>
-                </div>
+                </div> */}
+
               </div>
             </div>
           </section>
@@ -236,9 +237,11 @@ export default function Home() {
               <h3 className="text-white sm:text-3xl font-bold leading-10">
                 Trending and Featured Blog posts
               </h3>
+              <Link href="/explore">
               <p className="text-white text-opacity-60 text-xs  sm:text-lg font-normal pt-3 sm:pt-0 leading-5 sm:leading-7">
                 Explore more
               </p>
+              </Link>
             </div>
             {/* props validation */}
             <div className="sm:grid sm:grid-cols-2">
